@@ -16,7 +16,7 @@ function Auth({ onLogin }) {
 
         try {
             const response = await fetch(
-                `https://sticky-notes-a6wn.onrender.com/api/auth/${endpoint}`,
+                `${import.meta.env.VITE_API_URL}/api/auth/${endpoint}`,
                 {
                     method: "POST",
                     headers: {
@@ -78,9 +78,10 @@ function Auth({ onLogin }) {
 
                 <input
                     type="password"
-                    placeholder="Password"
+                    placeholder="Password (minimum 8 characters)"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    minLength={8}
                     required
                 />
 

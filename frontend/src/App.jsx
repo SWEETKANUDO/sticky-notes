@@ -68,7 +68,7 @@ function App() {
 
     try {
       const response = await apiRequest(
-        "https://sticky-notes-a6wn.onrender.com/api/notes"
+        `${import.meta.env.VITE_API_URL}/api/notes`
       );
 
       const data = await response.json();
@@ -134,7 +134,7 @@ function App() {
   async function delBtn(id) {
     try {
       const response = await apiRequest(
-        `https://sticky-notes-a6wn.onrender.com/api/notes/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/notes/${id}`,
         {
           method: "DELETE",
         }
@@ -170,7 +170,7 @@ function App() {
 
     try {
       const response = await apiRequest(
-        `https://sticky-notes-a6wn.onrender.com/api/notes/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/notes/${id}`,
         {
           method: "PUT",
           headers: {
