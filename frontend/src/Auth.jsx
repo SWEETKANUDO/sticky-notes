@@ -78,10 +78,9 @@ function Auth({ onLogin }) {
 
                 <input
                     type="password"
-                    placeholder="Password (minimum 8 characters)"
+                    placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    minLength={8}
                     required
                 />
 
