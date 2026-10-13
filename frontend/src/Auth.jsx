@@ -16,7 +16,7 @@ function Auth({ onLogin }) {
 
         try {
             const response = await fetch(
-                `http://localhost:3000/api/auth/${endpoint}`,
+                `https://sticky-notes-a6wn.onrender.com/api/notes/auth/${endpoint}`,
                 {
                     method: "POST",
                     headers: {
