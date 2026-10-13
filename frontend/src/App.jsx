@@ -68,7 +68,7 @@ function App() {
 
     try {
       const response = await apiRequest(
-        "http://localhost:3000/api/notes"
+        "https://sticky-notes-a6wn.onrender.com/api/notes"
       );
 
       const data = await response.json();
@@ -104,7 +104,7 @@ function App() {
 
     try {
       const response = await apiRequest(
-        "http://localhost:3000/api/notes",
+        "https://sticky-notes-a6wn.onrender.com/api/notes",
         {
           method: "POST",
           headers: {
@@ -134,7 +134,7 @@ function App() {
   async function delBtn(id) {
     try {
       const response = await apiRequest(
-        `http://localhost:3000/api/notes/${id}`,
+        `https://sticky-notes-a6wn.onrender.com/api/notes/${id}`,
         {
           method: "DELETE",
         }
@@ -170,7 +170,7 @@ function App() {
 
     try {
       const response = await apiRequest(
-        `http://localhost:3000/api/notes/${id}`,
+        `https://sticky-notes-a6wn.onrender.com/api/notes/${id}`,
         {
           method: "PUT",
           headers: {
