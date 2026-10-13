@@ -16,7 +16,7 @@ function Auth({ onLogin }) {
 
         try {
             const response = await fetch(
-                `https://sticky-notes-a6wn.onrender.com/api/notes/auth/${endpoint}`,
+                `https://sticky-notes-a6wn.onrender.com/api/auth/${endpoint}`,
                 {
                     method: "POST",
                     headers: {
