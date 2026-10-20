@@ -533,9 +533,18 @@ function App() {
         </section>
       </main>
 
+
       <footer className="footer">
-        Made with ❤️ using MERN
+        <p>
+          © {new Date().getFullYear()} <strong>Mihir Bhuva</strong>
+          . All rights reserved.
+        </p>
+
+        <span className="footer-subtitle">
+          Stay organized, one sticky at a time ✨
+        </span>
       </footer>
+
     </div>
   );
 }

@@ -127,7 +127,7 @@ button:disabled {
 
 .skeleton-actions::before,
 .skeleton-actions::after {
-  content: '';
+  content: "";
   width: 32px;
   height: 32px;
   background: linear-gradient(90deg, #eab308 25%, #fde047 50%, #eab308 75%);
@@ -153,7 +153,7 @@ button:disabled {
 
 .skeleton-footer::before,
 .skeleton-footer::after {
-  content: '';
+  content: "";
   height: 16px;
   background: linear-gradient(90deg, #eab308 25%, #fde047 50%, #eab308 75%);
   background-size: 200% 100%;
@@ -193,10 +193,6 @@ button:disabled {
   height: 20px;
   color: #94a3b8;
   pointer-events: none;
-}
-
-.search-input {
-  padding-left: 48px;
 }
 
 /* Enhanced Error State */
@@ -244,6 +240,10 @@ button:disabled {
   gap: 8px;
 }
 
+.notes-title {
+  margin-bottom: 20px;
+}
+
 .notes-title h2 svg {
   color: #facc15;
 }
@@ -272,8 +272,11 @@ button:disabled {
 }
 
 .app {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
   padding: 25px;
 }
@@ -285,8 +288,8 @@ button:disabled {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding-bottom: 25px;
-  margin-bottom: 25px;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
   border-bottom: 1px solid #334155;
 }
 
@@ -298,17 +301,20 @@ button:disabled {
 }
 
 .logo-icon {
-  font-size: 38px;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
 }
 
 .logo h1 {
   color: #facc15;
   font-size: 30px;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .logo p {
-  margin-top: 5px;
+  margin-top: 2px;
   color: #94a3b8;
   font-size: 14px;
 }
@@ -481,7 +487,7 @@ button:disabled {
 
 .search-input {
   width: 100%;
-  padding: 14px 18px;
+  padding: 14px 18px 14px 48px;
   border: 1px solid #334155;
   border-radius: 12px;
   outline: none;
@@ -509,6 +515,7 @@ button:disabled {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
   align-items: start;
+  flex: 1;
   gap: 30px;
 }
 
@@ -787,10 +794,20 @@ textarea {
 /* App Footer */
 
 .footer {
-  padding: 35px 0 10px;
-  color: #64748b;
-  font-size: 13px;
   text-align: center;
+  padding: 18px 18px 0;
+  margin-top: 30px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer strong {
+  color: #4f46e5;
 }
 
 /* Keyboard Focus */
@@ -832,9 +849,9 @@ button:focus-visible {
   .header {
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
   }
 
   .logo {
@@ -842,7 +859,8 @@ button:focus-visible {
   }
 
   .logo-icon {
-    font-size: 30px;
+    width: 36px;
+    height: 36px;
   }
 
   .logo h1 {
@@ -872,7 +890,7 @@ button:focus-visible {
   }
 
   .search-input {
-    padding: 12px 14px;
+    padding: 12px 14px 12px 48px;
     font-size: 14px;
   }
 
@@ -908,7 +926,8 @@ button:focus-visible {
   }
 
   .logo-icon {
-    font-size: 26px;
+    width: 32px;
+    height: 32px;
   }
 
   .header-actions {
